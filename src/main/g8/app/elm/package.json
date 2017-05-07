@@ -1,0 +1,12 @@
+{
+  "name": "filewatcher",
+  "version": "0.0.1",
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0"
+  },
+  "scripts": {
+    "watch": "chokidar '**/*.elm' -c 'elm-make src/App.elm --output=../assets/static/elm.js' --initial"
+  }
+}
+
+

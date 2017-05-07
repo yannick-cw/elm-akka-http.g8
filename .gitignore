@@ -1,0 +1,6 @@
+src/main/g8/app/jvm/target
+.idea
+.dev
+node_modules
+elm-stuff
+.DS_Store
