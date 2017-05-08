@@ -16,11 +16,11 @@ object Server extends App {
   implicit val materializer = ActorMaterializer()
 
   val basePageRoute: Route =
-    get(pathSingleSlash(getFromFile("../assets/static/index.html"))) ~ getFromDirectory("../assets/static/")
+    get(pathSingleSlash(getFromFile("app/assets/static/index.html"))) ~ getFromDirectory("app/assets/static/")
 
   val pingRoute: Route =
     (get & path("ping")) {
-        complete(HttpEntity(`application/json`, """{ "pong" : "Pong: This is dog" }"""))
+        complete(HttpEntity(`application/json`, """{ "pong" : "This is dog" }"""))
       }
 
   Http().bindAndHandle(basePageRoute ~ pingRoute, "0.0.0.0", 8080)
